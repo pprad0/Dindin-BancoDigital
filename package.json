@@ -1,0 +1,34 @@
+{
+  "name": "desafio-backend-03-dindin-dbeifood",
+  "version": "1.0.0",
+  "description": "Projeto de resolução  do desafio do módulo 03 do curso Desenvolvimento de Software (foco backend)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pprad0/desafio-backend-03-dindin-dbeifood.git"
+  },
+  "keywords": [
+    "API",
+    "Rest",
+    "postgreSQL"
+  ],
+  "author": "Mateus Fernando, Pedro Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pprad0/desafio-backend-03-dindin-dbeifood/issues"
+  },
+  "homepage": "https://github.com/pprad0/desafio-backend-03-dindin-dbeifood#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
