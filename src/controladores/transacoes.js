@@ -52,11 +52,11 @@ const cadastarTransacao = async (req, res) => {
     const { descricao, valor, data, categoria_id, tipo } = req.body
 
     if (!descricao || !valor || !data || !categoria_id || !tipo) {
-        return res.status(400).json({ "mensagem": "Todos os campos obrigatórios devem ser informados." })
+        return res.status(400).json({ "mensagem": "Preencha os campos 'descrição', 'valor', 'data', 'categoria_id' e 'tipo' (entrada ou saida)." })
     }
 
     if (tipo !== "entrada" && tipo !== "saida") {
-        res.status(400).json({ mensagem: "Informe o tipo de transação (entrada ou saida)." })
+        return res.status(400).json({ mensagem: "Informe o tipo de transação (entrada ou saida)." })
     }
 
     try {
@@ -88,7 +88,7 @@ const atualizarTransacao = async (req, res) => {
 
     try {
         if (!descricao || !valor || !data || !categoria_id || !tipo) {
-            return res.status(400).json({ mensagem: "Todos os campos obrigatórios devem ser informados." })
+            return res.status(400).json({ mensagem: "Preencha os campos 'descricao', 'valor', 'data', 'categoria_id' e 'tipo' (entrada ou saida)." })
         }
 
         const validarIdTransacao = await pool.query('SELECT * FROM transacoes WHERE id = $1 AND usuario_id = $2', [id, tokenUsuario.id]);
